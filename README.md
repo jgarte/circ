@@ -16,7 +16,7 @@ When writing to the buffer with `write-to`, if the buffer's current occupied `le
 When reading from the buffer with `read-from`, if the buffer's current `length` is not 0 (if it is there is nothing to read) then the value at the `read` index is returned, the `read` index is incremented modulo `size` and the `length` is decremented.
 
 Demonstration:
-First, set the global variable `*buffer*` to a new buffer so you can manipulate it: `(setf *buffer* (new-circ 4)`
+First, set the global variable `*buffer*` to a new buffer so you can manipulate it: `(setf *buffer* (new-circ 4))`
 This will print a representation of the struct: `#S(CIRC :BUFFER #(NIL NIL NIL NIL) :SIZE 4 :READ 0 :WRITE 0 :LENGTH 0)`
 Add some things to the buffer and look at it again (the `write-to` function returns the current length of the buffer or `nil` if it is full:
 ```
