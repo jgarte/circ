@@ -3,7 +3,7 @@ Circular Buffer
 
 (Note: this is obviously far less substantial than my original proposal, as well as being a simpler data structure. My life is kind of a mess right now and I only had a few hours to work on this. ANYWAY,)
 
-A simple/toy implementation of a circular buffer to demonstrate the basic algorithms/concept. Written in Common Lisp because I like it (note that I am not really demonstrating its powers very effectiely with this project). If you don't have a CL environment handy and really want to run the code yourself the fastest way is probably [portacle]( https://portacle.github.io/).
+A simple/toy implementation of a circular buffer to demonstrate the basic algorithms/concept. Written in Common Lisp because I like it (note that I am not really demonstrating its powers very effectiely with this project). If you don't have a CL environment handy and really want to run the code yourself the fastest way is probably [portacle]( https://portacle.github.io/), but I demonstrate all of the functionality below.
 
 A circular buffer is basically a region of memory with two pointers, one for reading and one for writing. In my implementation a built-in array type is used for the buffer itself because Common Lisp is a high-level language that generally does not work with memory/pointers directly. The buffer is contianed within a structure that also includes slots for the maximum size of the buffer, the read and write indices, and the current length of the used space in the buffer.
 
